@@ -1,4 +1,4 @@
-FROM node:12-buster-slim
+FROM node:20-buster
 
 ENV PORT 80
 EXPOSE 80
@@ -14,6 +14,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
+
+RUN npm install -g npm@latest
 
 # have nodemon available for local dev use (file watching)
 RUN npm install -g nodemon@2.*
