@@ -1,4 +1,4 @@
-name: Build Result
+name: CI - Build Result
 
 on:
   # we want pull requests so we can build(test) but not push to image registry
@@ -17,7 +17,7 @@ on:
       - 'result/**'
       - '.github/workflows/call-docker-build-result.yaml'
   schedule:
-    # re-run montly to keep image fesh with upstream base images
+    # re-run montly to keep image fresh with upstream base images
     - cron: '0 12 15 * *'
 
 jobs:
@@ -78,7 +78,7 @@ jobs:
       
       ### platforms to build for, defaults to linux/amd64
       ### other options: linux/amd64,linux/arm64,linux/arm/v7
-      platforms: linux/amd64,linux/arm64,linux/arm/v7
+      platforms: linux/amd64,linux/arm64,linux/arm/v8
       
       ### Create a PR comment with image tags and labels
       ### defaults to false
