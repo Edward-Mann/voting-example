@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:20-buster
 
 ENV PORT 80
 EXPOSE 80
