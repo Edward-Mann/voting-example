@@ -1,15 +1,16 @@
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700,600");
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  background-color: #F7F8F9;
+  background-color: #f7f8f9;
   height: 100vh;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 button {
@@ -19,8 +20,8 @@ button {
 }
 
 button[type="submit"] {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
+  appearance: none;
+  border-radius: 0;
 }
 
 button i {
@@ -116,15 +117,4 @@ button.b {
 
 #background-stats {
   z-index: 1;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-#background-stats div {
-  transition: width 400ms ease-in-out;
-  display: inline-block;
-  margin-bottom: -4px;
-  width: 50%;
-  height: 100%;
-}
+  height: 
