@@ -19,10 +19,10 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    # permissions:
-      # contents: read # clone the repo to lint
-      # statuses: write #read/write to repo custom statuses
+          GITHUB_TOKEN: ${{ secrets.GHCR_TOKEN }}
+    permissions:
+      contents: read # clone the repo to lint
+      statuses: write #read/write to repo custom statuses
 
     ### use Reusable Workflows to call my workflow remotely
     ### https://docs.github.com/en/actions/learn-github-actions/reusing-workflows
