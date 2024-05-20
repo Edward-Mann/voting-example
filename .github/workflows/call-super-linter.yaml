@@ -27,7 +27,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GHCR_TOKEN }}
-          FILTER_REGEX_EXCLUDE: 'results/views/socket.io.js'
+          FILTER_REGEX_EXCLUDE: '/github/workspace/result/views/socket.io.js'
       
       - name: Run ESLint
         run: npx eslint .
