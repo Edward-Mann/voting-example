@@ -12,8 +12,6 @@ option_b = os.getenv("OPTION_B", "Dogs")
 hostname = socket.gethostname()
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = os.urandom(24)  # Or set a secure, constant key in your config
-csrf = CSRFProtect(app)
 
 gunicorn_error_logger = logging.getLogger("gunicorn.error")
 app.logger.handlers.extend(gunicorn_error_logger.handlers)
