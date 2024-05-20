@@ -14,6 +14,9 @@ jobs:
       - name: Call Super-Linter
         uses: actions/checkout@v2
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Run super-linter-workflow
         uses: github/super-linter@v4  
         env:
@@ -21,14 +24,11 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GHCR_TOKEN }}
       
-      - name: Install dependencies
-        run: npm install
-
       - name: Run ESLint
-        run: npx eslint
+        run: npx eslint .
         env:
           CI: true
-          
+
     permissions:
       contents: read # clone the repo to lint
       statuses: write #read/write to repo custom statuses
