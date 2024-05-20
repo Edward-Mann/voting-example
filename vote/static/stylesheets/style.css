@@ -117,4 +117,15 @@ button.b {
 
 #background-stats {
   z-index: 1;
-  height: 
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#background-stats div {
+  transition: width 400ms ease-in-out;
+  display: inline-block;
+  margin-bottom: -4px;
+  width: 50%;
+  height: 100%;
+}
