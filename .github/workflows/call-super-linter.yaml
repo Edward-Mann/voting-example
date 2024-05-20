@@ -20,6 +20,15 @@ jobs:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GHCR_TOKEN }}
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npx eslint
+        env:
+          CI: true
+          
     permissions:
       contents: read # clone the repo to lint
       statuses: write #read/write to repo custom statuses
