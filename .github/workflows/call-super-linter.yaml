@@ -28,12 +28,6 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GHCR_TOKEN }}
           FILTER_REGEX_EXCLUDE: '/github/workspace/result/views/socket.io.js'
-      
-      - name: Run ESLint
-        run: npx eslint .
-        env:
-          CI: true
-        working-directory: ./result  
 
     permissions:
       contents: read # clone the repo to lint
