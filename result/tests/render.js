@@ -1,6 +1,8 @@
-const system = require('system');
-const page = require('webpage').create();
-const url = system.args[1];
+/* global phantom */
+
+const system = require('system')
+const page = require('webpage').create()
+const url = system.args[1]
 
 page.onLoadFinished = function () {
   setTimeout(function () {
